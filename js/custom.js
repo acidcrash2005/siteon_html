@@ -31,6 +31,7 @@ Design and Developed by: iqonicthemes.in
 
 "use strict";
 
+
 /*************************
 page loader
 *************************/
@@ -64,17 +65,34 @@ function backtotop() {
 /*************************
 Cursor animation
 *************************/
+$("body").niceScroll({
+    cursorcolor: "#fdc318",
+    cursorwidth: "18px",
+    background: "rgba(23, 23, 23, 0.9)",
+    cursorborder: "none",
+    cursorborderradius: 0,
+    scrollspeed: 60,
+    mousescrollstep: 45,
+    cursorwidth: 10,
+    cursorborder: 0,
+    autohidemode: !1,
+    horizrailenabled: !1
+});
+
+
+
+
 var numText = 0;
 var activeSlide = 0;
 var widthArray = [];
 
 $(function () {
     numText = $('.text-animate b').length - 1;
-    
-    $('.text-animate b').each(function(index,value){
-        widthArray.push( $(this).width() );
+
+    $('.text-animate b').each(function (index, value) {
+        widthArray.push($(this).width());
     });
-    
+
     animateText();
 
     setInterval(function () {
@@ -83,21 +101,21 @@ $(function () {
 
 });
 
-function animateText() {        
+function animateText() {
     $('.text-animate .cd-words-wrapper').addClass('w0');
-    
+
     setTimeout(function () {
         $('.text-animate .cd-words-wrapper').width(widthArray[activeSlide]);
-        
+
         $('.text-animate b').addClass('is-hidden').removeClass('is-visible');
-        $('.text-animate b').eq(activeSlide).removeClass('is-hidden').addClass('is-visible'); 
-        
-        $('.text-animate .cd-words-wrapper').removeClass('w0');        
+        $('.text-animate b').eq(activeSlide).removeClass('is-hidden').addClass('is-visible');
+
+        $('.text-animate .cd-words-wrapper').removeClass('w0');
     }, 500);
-    
-    if (activeSlide >= numText){
+
+    if (activeSlide >= numText) {
         activeSlide = 0;
-    }else{
+    } else {
         activeSlide++;
     }
 }
