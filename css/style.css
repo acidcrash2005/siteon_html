@@ -287,6 +287,8 @@ blockquote {
 }
 .portfolio-item:hover img{
     top: -20px;
+    -webkit-filter: blur(1px) grayscale(1);
+    filter: blur(1px) grayscale(1);
 }
 .portfolio-item:hover .portfolio-item__title{
     bottom: 0;
