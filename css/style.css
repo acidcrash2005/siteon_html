@@ -247,7 +247,7 @@ blockquote {
 }
 
 /*---------------------------------------------------------------------
-                               Back to Top
+                               portfolio container
 -----------------------------------------------------------------------*/
 .portfolio-container{
     display: -webkit-box;
@@ -319,6 +319,85 @@ blockquote {
         margin-bottom: 7px;
     margin-top: 5px;
     font: 14px 'Open Sans', sans-serif;
+}
+
+/*---------------------------------------------------------------------
+                               portfolio inner page
+-----------------------------------------------------------------------*/
+.img-pac{
+    position: relative;
+    float: left;
+    margin-right: 50px;
+}
+.img-pac img{
+    position: relative;
+    z-index: 3;
+    width: 300px !important;
+    transform: translateY(-10px);
+}
+.img-pac img + img{
+    position: relative;
+    margin-left: -210px;
+    z-index: 2;
+}
+
+.img-pac img + img + img{
+    z-index: 1;
+}
+
+.img-pac img:nth-child(1){
+    animation: template 4s infinite ease-in-out;
+}
+.img-pac img:nth-child(2){
+    animation: template 4s 0.5s infinite ease-in-out;
+}
+.img-pac img:nth-child(3){
+    animation: template 4s 1s infinite ease-in-out;
+}
+
+
+@-webkit-keyframes identifier {
+    from {  }
+    to {  }
+}
+@-o-keyframes identifier {
+    from {  }
+    to {  }
+}
+@-moz-keyframes identifier {
+    from {  }
+    to {  }
+}
+@keyframes template {
+    0% { 
+        transform: translateY(-10px);
+    }
+    50% { 
+        transform: translateY(10px);
+    }
+    100% {
+        transform: translateY(-10px);
+    }
+}
+
+
+blockquote{
+    overflow: hidden;
+}
+.mobile-mokup1{
+    position: relative;
+}
+.site-block-img{
+    position: absolute;
+    width: 244px;
+    height: 391px;
+    z-index: 1;
+    top: 150px;
+    left: 280px;
+    transform: rotateX(14deg) rotateY(10deg) rotateZ(-29deg) skewY(0deg) skewX(3deg);
+    background-size: cover;
+    background: #ccc;
+    opacity: 0.5;
 }
 
 /*---------------------------------------------------------------------
@@ -1576,6 +1655,9 @@ Margin Right
     padding-bottom: 20px;
     margin-bottom: 25px;
 }
+.heading-title_p{
+    color: #fff;
+}
 
 .heading-title .title:before {
     content: "";
@@ -2180,9 +2262,6 @@ header .menu-sticky .button {
     float: left;
 }
 
-.iq-list li span {
-    display: table-cell;
-}
 
 .iq-objects-software {
     position: absolute;
@@ -3164,6 +3243,8 @@ header .menu-sticky .button {
     margin: 15px 0 5px;
     border-top: 1px solid #ececec;
     padding-top: 15px;
+    overflow: hidden;
+    padding-left: 6px;
 }
 
 .iq-blog-meta ul li {
