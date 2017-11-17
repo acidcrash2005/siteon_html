@@ -60,6 +60,7 @@ NOTE: This file contains the styling for responsive Template.
 	.slider-container .slider-right { left: 100%; }
 	.iq-footer-box .iq-icon i { margin-right: 10px; }
 }
+
 @media(max-width:992px) {
 
 	/*----------------
@@ -95,6 +96,18 @@ NOTE: This file contains the styling for responsive Template.
 	.iq-banner .container-fluid, header .container-fluid { padding: 0 40px; }
 	.heading-title p { padding: 0; }
 	.screenshots-slider { min-height: 500px; }
+    
+    .portfolio-container {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
+
+    .portfolio-item {
+        width: 100%;
+    }
 }
 @media(max-width:979px) {
 	.iq-objects-asked .iq-objects-01 { display: none; }
