@@ -2706,6 +2706,8 @@ header .menu-sticky .button {
 
 .client-info {
     margin-top: 30px;
+	position: relative;       /* changed bondarenko */
+	padding-bottom: 80px;     /* changed bondarenko */
 }
 
 .client-name:before {
@@ -2718,10 +2720,7 @@ header .menu-sticky .button {
     color: #f0f0f0;
     line-height: normal;
 }
-.iq-client:hover .client-info p{
-    white-space: inherit;
-    overflow: visible;
-}
+
 
 
 .client-name:after {
@@ -2747,6 +2746,19 @@ header .menu-sticky .button {
     transition: all 0.2s linear;
 
 }
+.iq-client:hover .client-info p{
+    white-space: inherit;
+    overflow: visible;
+	background-color: #ffffff;
+}
+.position-test{
+    position: absolute;
+    left: 0;
+    top:75px;
+    right: 0;
+}
+    /* end test bondarenko*/
+
 
 .owl-carousel .owl-nav {
     display: block;
