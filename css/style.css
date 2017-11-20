@@ -2712,19 +2712,24 @@ header .menu-sticky .button {
     content: "\f10d";
     font-family: FontAwesome;
     position: absolute;
-    top: 15px;
-    left: 15px;
+    top: 5px;  
+    left: 5px;
     font-size: 44px;
     color: #f0f0f0;
     line-height: normal;
 }
+.iq-client:hover .client-info p{
+    white-space: inherit;
+    overflow: visible;
+}
+
 
 .client-name:after {
     content: "\f10e";
     font-family: FontAwesome;
     position: absolute;
-    bottom: 15px;
-    right: 15px;
+    bottom: 5px;
+    right: 5px;
     font-size: 44px;
     color: #f0f0f0;
     line-height: normal;
@@ -2732,6 +2737,15 @@ header .menu-sticky .button {
 
 .client-info p {
     line-height: 28px;
+	
+	/* overflow star here */
+	
+	
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    transition: all 0.2s linear;
+
 }
 
 .owl-carousel .owl-nav {
