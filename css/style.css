@@ -119,37 +119,37 @@ h6 a {
 h1 {
     font-size: 40px;
     font-style: normal;
-    line-height: 46px;
+    line-height: 1.2em;
 }
 
 h2 {
     font-size: 36px;
     font-style: normal;
-    line-height: 44px;
+    line-height: 1.2em;
 }
 
 h3 {
     font-size: 32px;
     font-style: normal;
-    line-height: 42px;
+    line-height: 1.2em;
 }
 
 h4 {
     font-size: 24px;
     font-style: normal;
-    line-height: 24px;
+    line-height: 1.2em;
 }
 
 h5 {
     font-size: 20px;
     font-style: normal;
-    line-height: 30px;
+    line-height: 1.2em;
 }
 
 h6 {
     font-size: 18px;
     font-style: normal;
-    line-height: 28px;
+    line-height: 1.2em;
 }
 
 .lead {
@@ -2791,6 +2791,8 @@ header .menu-sticky .button {
 .iq-loved-customers .owl-carousel .owl-item .item {
     padding: 10px 10px 20px;
 }
+
+
 
 .iq-client {
     position: relative;
