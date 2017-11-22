@@ -65,22 +65,22 @@ function backtotop() {
 /*************************
 Cursor animation
 *************************/
-if (window.innerWidth >= 1048) {
-    $("body").niceScroll({
-        cursorcolor: "#fdc318",
-        cursorwidth: "18px",
-        background: "rgba(23, 23, 23, 0.9)",
-        cursorborder: "none",
-        cursorborderradius: 0,
-        scrollspeed: 60,
-        mousescrollstep: 45,
-        cursorwidth: 10,
-        cursorborder: 0,
-        autohidemode: false,
-        horizrailenabled: false,
-        bouncescroll: false
-    });
-}
+//if (window.innerWidth >= 1048) {
+//    $("body").niceScroll({
+//        cursorcolor: "#fdc318",
+//        cursorwidth: "18px",
+//        background: "rgba(23, 23, 23, 0.9)",
+//        cursorborder: "none",
+//        cursorborderradius: 0,
+//        scrollspeed: 60,
+//        mousescrollstep: 45,
+//        cursorwidth: 10,
+//        cursorborder: 0,
+//        autohidemode: false,
+//        horizrailenabled: false,
+//        bouncescroll: false
+//    });
+//}
 
 
 
