@@ -135,6 +135,17 @@ NOTE: This file contains the styling for responsive Template.
     
 }
 @media(max-width:767px) {
+	.bulit-block__item{
+		width: 100%;
+		flex: auto;
+	}
+	.bulit-block{
+		padding: 0;
+	}
+	.bulit-block__item{
+		margin-left: 0;
+		margin-right: 0;
+	}
 	.iq-banner .banner-text { margin-top: 80px; }
 	.iq-banner .iq-waves { left: -6.44%; }
 		.counter span{width:75%;}

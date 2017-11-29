@@ -4289,7 +4289,7 @@ header .menu-sticky .button {
 }
 .porftolio-bg__3{
     position: absolute;
-    left: -30%;
+    left: -50%;
     top: 4080px;
     width: 200%;
     height: 1460px;
@@ -4327,6 +4327,10 @@ header .menu-sticky .button {
     display: flex;
     padding: 15px;
     margin-bottom: 50px;
+
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
 }
 .bulit-container__header{
     padding: 0 30px;
