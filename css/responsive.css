@@ -65,6 +65,10 @@ NOTE: This file contains the styling for responsive Template.
 
 @media(max-width:992px) {
 
+	.col-flex-md-6{
+		width: 100%;
+	}
+
 	/*----------------
 	Section padding 
 	----------------*/
