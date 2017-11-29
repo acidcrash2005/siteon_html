@@ -31,7 +31,8 @@ NOTE: This is main stylesheet of template, This file contains the styling for th
 
 
 a {
-    color: #333;
+    color: #55aad1;
+    text-decoration: underline;
 }
 
 a:focus,
