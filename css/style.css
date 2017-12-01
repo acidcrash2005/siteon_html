@@ -2527,6 +2527,12 @@ header .menu-sticky .button {
 /*---------------------------------------------------------------------
                              Special Features
 -----------------------------------------------------------------------*/
+.iq-amazing-tab{
+    padding-bottom: 25px;
+}
+.iq-amazing-tab .row-flex > div:first-child{
+    padding-left: 40px;
+}
 
 .iq-amazing-tab .nav.nav-tabs {
     border-bottom: 1px solid #e9e9e9;
@@ -4397,6 +4403,7 @@ header .menu-sticky .button {
     -webkit-flex-wrap: wrap;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
+    margin: 25px 0;
 }
 .aline-item-end{
     -webkit-align-self: flex-end;

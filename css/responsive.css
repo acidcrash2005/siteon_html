@@ -77,6 +77,9 @@ NOTE: This file contains the styling for responsive Template.
 	.row-flex > div{
 		width: 100%;
 	}
+	.iq-amazing-tab .row-flex > div:first-child{
+		padding-left: 15px;
+	}
 
 	/*----------------
 	Section padding 
