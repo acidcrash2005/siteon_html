@@ -4388,7 +4388,26 @@ header .menu-sticky .button {
 .responsive-block__img{
     margin: 25px 0;
 }
-
+.row-flex{
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+.aline-item-end{
+    -webkit-align-self: flex-end;
+    -ms-flex-item-align: end;
+    align-self: flex-end;
+}
+.aline-item-center{
+    -webkit-align-self: center;
+    -ms-flex-item-align: center;
+    align-self: center;
+}
 /*---------------------------------------------------------------------
                             Popup window
 -----------------------------------------------------------------------*/
