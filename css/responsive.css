@@ -68,6 +68,12 @@ NOTE: This file contains the styling for responsive Template.
 	.col-flex-md-6{
 		width: 100%;
 	}
+	h2{
+		font-size: 24px;
+	}
+	.popup__content{
+		padding: 15px;
+	}
 
 	/*----------------
 	Section padding 

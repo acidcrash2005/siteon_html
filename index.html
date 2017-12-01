@@ -27,6 +27,8 @@
     <link rel="stylesheet" type="text/css" href="css/font-awesome.css" />
     <link rel="stylesheet" type="text/css" href="fonts/fonts.css" />
 
+    <!-- Magnific Popup -->
+    <link rel="stylesheet" type="text/css" href="css/magnific-popup/magnific-popup.css" />
 
     <!-- Animate -->
     <link rel="stylesheet" type="text/css" href="css/animate.css" />
@@ -43,6 +45,9 @@
     <!-- Style customizer (Remove these two lines please) -->
     <link rel="stylesheet" href="css/color/color.css" data-style="styles">
     <link rel="stylesheet" href="css/style-customizer.css" />
+
+    <!-- Phone Input Style -->
+    <link rel="stylesheet" href="css/intlTelInput.css" />
 
     <!-- custom style -->
     <link rel="stylesheet" href="css/custom.css" />
@@ -81,7 +86,7 @@
                     </a>
                 </div>
                 <div class="navbar-collapse collapse">
-                    <a href="#" class="button bt-black pull-right visible-lg">Бесплатная консультация</a>
+                    <a href="#call-popup" class="button bt-black pull-right visible-lg open-popup-link">Бесплатная консультация</a>
                     <nav>
                         <ul class="nav navbar-nav navbar-right">
                             <li class="active"><a class="page-scroll" href="#iq-home">Главная</a></li>
@@ -124,7 +129,7 @@
                         </p>
 
                         <div class="iq-mt-10">
-                            <a href="#" class="button bt-black animate-button">Заказать сайт</a>
+                            <a href="#call-popup" class="button bt-black animate-button open-popup-link">Заказать сайт</a>
 
                         </div>
                     </div>
@@ -507,6 +512,8 @@
         <!-- Tab Features END -->
 
 
+
+
         <!-- Counter -->
 
         <div class="iq-pt-80 iq-counter-box iq-bg iq-bg-fixed iq-over-black-80 iq-font-white" style="background: url(images/meeting.jpg);">
@@ -547,7 +554,14 @@
                         <div class="col-md-6">
                             <div class="counter-info-img">
                                 <img class="center-block" src="images/comp1.png" alt="">
-
+                                <!--
+                                <a href="video/01.mp4" class="iq-video popup-youtube"><i class="ion-ios-play-outline"></i></a>
+                                <div class="iq-waves">
+                                    <div class="waves wave-1"></div>
+                                    <div class="waves wave-2"></div>
+                                    <div class="waves wave-3"></div>
+                                </div>
+-->
                             </div>
                         </div>
                     </div>
@@ -632,7 +646,7 @@
                 <div class="row">
                     <div class="col-sm-4 col-md-4">
                         <div class="iq-pricing text-center">
-                            <div class="price-title iq-bg iq-over-blue-80" style="background: url(images/meeting.jpg);">
+                            <div class="price-title iq-bg iq-over-blue-80" style="background: url(images/bg/08.jpg);">
                                 <h1 class="iq-font-white iq-tw-7"><small>$</small>19<small>/Month</small></h1>
                                 <span class="text-uppercase iq-tw-4 iq-font-white">BASIC</span>
                             </div>
@@ -656,7 +670,7 @@
                     </div>
                     <div class="col-sm-4 col-md-4 re4-mt-30 wow flipInY" data-wow-duration="1s">
                         <div class="iq-pricing text-center">
-                            <div class="price-title iq-bg iq-over-blue-80" style="background: url(images/meeting.jpg);">
+                            <div class="price-title iq-bg iq-over-blue-80" style="background: url(images/bg/08.jpg);">
                                 <h1 class="iq-font-white iq-tw-7"><small>$</small>29<small>/Month</small></h1>
                                 <span class="text-uppercase iq-tw-4 iq-font-white">STANDARD</span>
                             </div>
@@ -676,7 +690,7 @@
                     </div>
                     <div class="col-sm-4 col-md-4 re4-mt-30">
                         <div class="iq-pricing text-center">
-                            <div class="price-title iq-bg iq-over-blue-80" style="background: url(images/meeting.jpg);">
+                            <div class="price-title iq-bg iq-over-blue-80" style="background: url(images/bg/08.jpg);">
                                 <h1 class="iq-font-white iq-tw-7"><small>$</small>49<small>/Month</small></h1>
                                 <span class="text-uppercase iq-tw-4 iq-font-white">ADVANCE</span>
                             </div>
@@ -701,6 +715,9 @@
         </section>
 
         <!-- Affordable Price END -->
+
+
+
 
 
         <!-- Frequently Asked Questions -->
@@ -770,6 +787,7 @@
         </section>
 
         <!-- Frequently Asked Questions END -->
+
 
 
         <!-- Clients -->
@@ -903,6 +921,39 @@
 
     <!-- back-to-top End -->
 
+
+    <!-- Popup form  -->
+        <div id="call-popup" class="popup">
+            <div class="popup__wraper">
+                <div class="popup__content">
+                    <a href="#" class="popup__close" type="button">
+                        <span class="r1"></span>
+                        <span class="r2"></span>
+                    </a>
+                    <form action="" class="validate-form">
+                        <h2>Форма обратной связи</h2>
+                        <p>Пожалуйста заполните форму и отправьте нам.</p>
+                        <div class="form-group">
+                            <input class="form-control" name="name" type="text" placeholder="Введите ваше имя">
+                        </div>
+                        <div class="form-group">
+                            <input class="form-control" name="phone" type="tel" required placeholder="Введите ваш телефон">
+                            <span class="valid-msg hide">✓ Все верно</span>
+                            <span class="error-msg hide">Невероный номер</span>
+                        </div>
+                        <input class="bot-check" type="text" name="protect" value="">
+                        <div class="form-group button-group">
+                            <input type="submit" class="button full" value="Отправить">
+                        </div>
+                        <p class="form-note"><i class="fa fa-shield" aria-hidden="true"></i> Ваши данные надежно защищены и не разглашаются третьим лицам.</p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    <!-- Popup form End -->
+
+
+
     <!-- jQuery -->
     <script type="text/javascript" src="js/jquery.min.js"></script>
 
@@ -915,6 +966,8 @@
     <!-- Jquery Appear -->
     <script type="text/javascript" src="js/jquery.appear.js"></script>
 
+    <!-- Magnific Popup -->
+    <script type="text/javascript" src="js/magnific-popup/jquery.magnific-popup.min.js"></script>
 
     <!-- Retina -->
     <script type="text/javascript" src="js/retina.min.js"></script>
@@ -922,6 +975,8 @@
     <!-- wow -->
     <script type="text/javascript" src="js/wow.min.js"></script>
 
+    <!-- Countdown -->
+    <script type="text/javascript" src="js/jquery.countdown.min.js"></script>
 
     <!-- Skrollr -->
     <script type="text/javascript" src="js/skrollr.min.js"></script>
@@ -936,6 +991,13 @@
     <!-- Style Customizer -->
     <script type="text/javascript" src="js/style-customizer.js"></script>
 
+    <!-- Custom -->
+    <script type="text/javascript" src="js/jquery.nicescroll.min.js"></script>
+
+    <!-- From Phone Input -->
+    <script type="text/javascript" src="js/intlTelInput.min.js"></script>
+
+    <!-- Custom user script-->
     <script type="text/javascript" src="js/custom.js"></script>
 
 </body>

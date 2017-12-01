@@ -62,6 +62,85 @@ function backtotop() {
         return false;
     });
 }
+
+/*************************
+ Popup Initialize
+ *************************/
+$(function () {
+    var animateClass = 'animated slideInDown';
+
+    $('.open-popup-link').click(function (e) {
+       e.preventDefault();
+
+       var targetPopup = $(this).attr('href');
+
+       $(targetPopup).addClass('open '+animateClass);
+    });
+
+    $('.popup__close, .popup__overlay').click(function (e) {
+        if ($(e.target).hasClass('popup__overlay') || $(e.target).hasClass('popup__close') || $(e.target).hasClass('r1') || $(e.target).hasClass('r2') ){
+            $('.popup').removeClass('open '+animateClass);
+        }
+        e.preventDefault();
+    });
+
+
+    /*************************
+     Phone Validation
+     *************************/
+
+    var telInput = $("input[type='tel']"),
+        errorMsg = $(".error-msg"),
+        validMsg = $(".valid-msg");
+
+    telInput.intlTelInput({
+        preferredCountries: ["ua", "ru", "us"],
+        utilsScript: '/js/utils.js'
+    });
+
+    var reset = function() {
+        telInput.removeClass("error");
+        errorMsg.addClass("hide");
+        validMsg.addClass("hide");
+    };
+
+    telInput.blur(function() {
+        reset();
+        if ($.trim(telInput.val())) {
+            if (telInput.intlTelInput("isValidNumber")) {
+                validMsg.removeClass("hide");
+            } else {
+                telInput.addClass("error");
+                errorMsg.removeClass("hide");
+            }
+        }
+    });
+
+    // on keyup / change flag: reset
+    telInput.on("keyup change", reset);
+
+    $('.validate-form').submit(function (e) {
+        if ($.trim(telInput.val())) {
+            if (telInput.intlTelInput("isValidNumber")) {
+                validMsg.removeClass("hide");
+                telInput.val(telInput.intlTelInput("getNumber", intlTelInputUtils.numberFormat.E164));
+                return true;
+            } else {
+                telInput.addClass("error");
+                errorMsg.removeClass("hide");
+                return false;
+            }
+        }
+    });
+
+
+
+
+
+});
+
+
+
 /*************************
 Cursor animation
 *************************/
@@ -88,6 +167,8 @@ $(window).scroll(function () {
 
 
 
+
+
 var numText = 0;
 var activeSlide = 0;
 var widthArray = [];
@@ -104,6 +185,9 @@ $(function () {
     setInterval(function () {
         animateText();
     }, 3000);
+
+
+
 
 });
 
@@ -199,7 +283,54 @@ function imgskrollr() {
     });
 }
 
+/*************************
+Magnific Popup
+*************************/
 
+function popupgallery() {
+    $('.popup-gallery').magnificPopup({
+        delegate: 'a.popup-img',
+        type: 'image',
+        tLoading: 'Loading image #%curr%...',
+        mainClass: 'mfp-img-mobile',
+        gallery: {
+            enabled: true,
+            navigateByImgClick: true,
+            preload: [0, 1] // Will preload 0 - before current, and 1 after the current image
+        },
+        image: {
+            tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
+            titleSrc: function (item) {
+                return item.el.attr('title') + '<small>by Marsel Van Oosten</small>';
+            }
+        }
+    });
+
+    $('.popup-youtube, .popup-vimeo, .popup-gmaps').magnificPopup({
+        disableOn: 700,
+        type: 'iframe',
+        mainClass: 'mfp-fade',
+        removalDelay: 160,
+        preloader: false,
+        fixedContentPos: false
+    });
+
+}
+
+
+/*************************
+countdown
+*************************/
+function countdown1() {
+    $('#countdown').countdown({
+        date: '10/01/2018 23:59:59',
+        offset: -8,
+        day: 'Day',
+        days: 'Days'
+    }, function () {
+        alert('Done!');
+    });
+}
 
 /*************************
 owl-carousel 
@@ -415,6 +546,7 @@ All function are called here
 *************************/
 $(document).ready(function () {
     backtotop(),
+        popupgallery(),
         owlcarousel(),
         accordion(),
         imgskrollr(),
@@ -422,6 +554,7 @@ $(document).ready(function () {
         Tabbar(),
         header(),
         progress(),
+        countdown1(),
         widget(),
         screensilder(),
         counter();

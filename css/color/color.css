@@ -31,7 +31,7 @@ NOTE: This is main stylesheet of template, This file contains the styling for th
 
 
 a {
-    color: #333;
+    color: #55aad1;
 }
 
 a:focus,
@@ -55,6 +55,9 @@ a:hover {
 
 .button {
     background: #fdc318;
+}
+.button.full{
+    width: 100%;
 }
 
 .iq-banner .iq-video {
@@ -244,6 +247,8 @@ blockquote {
 
 
 
+
+
 @media(max-width:767px) {
     header .navbar-default .navbar-toggle .icon-bar,
     header .navbar-default .navbar-nav > li > a:hover,
@@ -258,4 +263,11 @@ blockquote {
 
 }
 
-
+/*---------------------------------------------------------------------
+                      		 Forms
+---------------------------------------------------------------------*/
+.form-control{
+    border-radius: 0;
+    height: 47px;
+    font-size: 18px;
+}
