@@ -62,6 +62,85 @@ function backtotop() {
         return false;
     });
 }
+
+/*************************
+ Popup Initialize
+ *************************/
+$(function () {
+    var animateClass = 'animated slideInDown';
+
+    $('.open-popup-link').click(function (e) {
+       e.preventDefault();
+
+       var targetPopup = $(this).attr('href');
+
+       $(targetPopup).addClass('open '+animateClass);
+    });
+
+    $('.popup__close, .popup__overlay').click(function (e) {
+        if ($(e.target).hasClass('popup__overlay') || $(e.target).hasClass('popup__close') || $(e.target).hasClass('r1') || $(e.target).hasClass('r2') ){
+            $('.popup').removeClass('open '+animateClass);
+        }
+        e.preventDefault();
+    });
+
+
+    /*************************
+     Phone Validation
+     *************************/
+
+    var telInput = $("input[type='tel']"),
+        errorMsg = $(".error-msg"),
+        validMsg = $(".valid-msg");
+
+    telInput.intlTelInput({
+        preferredCountries: ["ua", "ru", "us"],
+        utilsScript: '/js/utils.js'
+    });
+
+    var reset = function() {
+        telInput.removeClass("error");
+        errorMsg.addClass("hide");
+        validMsg.addClass("hide");
+    };
+
+    telInput.blur(function() {
+        reset();
+        if ($.trim(telInput.val())) {
+            if (telInput.intlTelInput("isValidNumber")) {
+                validMsg.removeClass("hide");
+            } else {
+                telInput.addClass("error");
+                errorMsg.removeClass("hide");
+            }
+        }
+    });
+
+    // on keyup / change flag: reset
+    telInput.on("keyup change", reset);
+
+    $('.validate-form').submit(function (e) {
+        if ($.trim(telInput.val())) {
+            if (telInput.intlTelInput("isValidNumber")) {
+                validMsg.removeClass("hide");
+                telInput.val(telInput.intlTelInput("getNumber", intlTelInputUtils.numberFormat.E164));
+                return true;
+            } else {
+                telInput.addClass("error");
+                errorMsg.removeClass("hide");
+                return false;
+            }
+        }
+    });
+
+
+
+
+
+});
+
+
+
 /*************************
 Cursor animation
 *************************/
@@ -88,6 +167,8 @@ $(window).scroll(function () {
 
 
 
+
+
 var numText = 0;
 var activeSlide = 0;
 var widthArray = [];
@@ -104,6 +185,9 @@ $(function () {
     setInterval(function () {
         animateText();
     }, 3000);
+
+
+
 
 });
 
