@@ -74,6 +74,9 @@ NOTE: This file contains the styling for responsive Template.
 	.popup__content{
 		padding: 15px;
 	}
+	.row-flex > div{
+		width: 100%;
+	}
 
 	/*----------------
 	Section padding 
