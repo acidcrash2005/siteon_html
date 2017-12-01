@@ -546,7 +546,6 @@ All function are called here
 *************************/
 $(document).ready(function () {
     backtotop(),
-        popupgallery(),
         owlcarousel(),
         accordion(),
         imgskrollr(),
@@ -554,7 +553,6 @@ $(document).ready(function () {
         Tabbar(),
         header(),
         progress(),
-        countdown1(),
         widget(),
         screensilder(),
         counter();
