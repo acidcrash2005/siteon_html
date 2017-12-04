@@ -245,7 +245,9 @@ blockquote {
 .no-border {
     border: none !important;
 }
+.b-main-arrow{
 
+}
 /*---------------------------------------------------------------------
                                portfolio container
 -----------------------------------------------------------------------*/
@@ -2803,11 +2805,8 @@ header .menu-sticky .button {
 .iq-client {
     position: relative;
     margin-top: 40px;
-    padding: 30px;
     text-align: center;
-    border: 1px solid #f2f2f2;
-    -webkit-box-shadow: 0px 6px 16px 0px rgba(0, 0, 0, 0.06);
-    box-shadow: 0px 6px 16px 0px rgba(0, 0, 0, 0.06);
+    padding: 30px 150px;
 }
 
 .iq-client:before {
@@ -2838,6 +2837,10 @@ header .menu-sticky .button {
 
 .client-info {
     margin-top: 30px;
+}
+
+.client-name{
+    text-align: center;
 }
 
 .client-name:before {

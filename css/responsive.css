@@ -80,6 +80,11 @@ NOTE: This file contains the styling for responsive Template.
 	.iq-amazing-tab .row-flex > div:first-child{
 		padding-left: 15px;
 	}
+	.bulit-block__item{
+		width: 100%;
+		flex: auto;
+		margin-bottom: 30px;
+	}
 
 	/*----------------
 	Section padding 
@@ -158,6 +163,9 @@ NOTE: This file contains the styling for responsive Template.
 		margin-left: 0;
 		margin-right: 0;
 	}
+	.ipad__mockup{
+		margin-left: -114%;
+	}
 	.iq-banner .banner-text { margin-top: 80px; }
 	.iq-banner .iq-waves { left: -6.44%; }
 		.counter span{width:75%;}
@@ -201,6 +209,17 @@ NOTE: This file contains the styling for responsive Template.
 	.screenshots-slider { min-height: 270px; }
 }
 @media(max-width:479px) {
+	.ipad__mockup{
+		margin-left: -547px;
+		position: relative;
+		left: 50%;
+	}
+	.button{
+		padding: 12px 14px;
+	}
+	.iq-p-50-100{
+		padding: 15px 15px;
+	}
 	.iq-banner .banner-text h1 { font-size: 26px; }
 	.iq-banner .iq-waves { display: none; }
 	.iq-get-in { padding: 20px 15px; }
