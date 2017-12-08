@@ -2792,6 +2792,7 @@ header .menu-sticky .button {
     animation-delay: 2s;
 }
 
+
 /*---------------------------------------------------------------------
                           Loved By Our Customers
 -----------------------------------------------------------------------*/
@@ -4526,4 +4527,30 @@ p.form-note{
 }
 .error-msg{
     color: #ff4952;
+}
+
+/*---------------------------------------------------------------------
+                          MSG block
+-----------------------------------------------------------------------*/
+.msg-block{
+    text-align: left;
+    padding-top: 5px;
+    clear: both;
+    max-width: 450px;
+    margin: auto;
+}
+.msg-block__sucess{
+    background: url(../images/msg-success.svg) no-repeat;
+    color: #34d2a6;
+}
+.msg-block__error{
+    background: url(../images/msg-error.svg) no-repeat;
+    color: #ffa093;
+}
+.msg-block__sucess, .msg-block__error{
+    -webkit-background-size: 44px;
+    background-size: 44px;
+    padding-left: 55px;
+    margin-bottom: 5px;
+    clear: both;
 }
