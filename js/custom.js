@@ -67,6 +67,8 @@ function backtotop() {
  Popup Initialize
  *************************/
 $(function () {
+
+
     var animateClass = 'animated slideInDown';
 
     $('.open-popup-link').click(function (e) {
@@ -84,6 +86,57 @@ $(function () {
         e.preventDefault();
     });
 
+    /*************************
+     Portoflio animate items
+     *************************/
+
+    $('figure').mousemove(function(e){
+        var pos = $(this).offset();
+        var elem_left = pos.left;
+        var elem_top = pos.top;
+
+        var x = (e.pageX - elem_left) - $(this).width() / 2;
+        var y = (e.pageY - elem_top) - $(this).height() / 2;
+
+        // rotate
+        $(this).css({
+            transform: 'rotateX('+y / 20 * -1+'deg) rotateY('+x / 20 +'deg) translateZ(0px)',
+            transition: 'none'
+        });
+
+        // image
+
+        $(this).find('.img3').css({
+            transform: 'translateX('+x / 60 * -1+'px) translateY('+y / 50 * -1+'px) translateZ(0px)',
+            transition: 'none',
+        });
+
+        $(this).find('.img4').css({
+            transform: 'translateX('+x / 30 * -1+'px) translateY('+y / 60 * -1+'px) translateZ(0px)',
+            transition: 'none',
+        });
+
+        $(this).find('.img5').css({
+            transform: 'translateX('+x / 20 * -1+'px) translateY('+y / 30 * -1+'px) translateZ(0px)',
+            transition: 'none',
+        });
+
+        $(this).find('.blik').css({
+            transform: 'translateX('+x  * 3 * -1+'px) translateY('+y  * 2 * -1+'px) translateZ(0px)',
+            transition: 'none',
+        });
+    });
+
+    $('figure').mouseleave(function(e){
+        $(this).css({
+            transform: 'rotateX(0deg) rotateY(0deg) translateZ(0px)',
+            transition: 'all 1s ease'
+        })
+        $(this).find('img').css({
+            transform: 'translateX(0px) translateY(0px) translateZ(0px)',
+            transition: 'all 1s ease',
+        });
+    });
 
     /*************************
      Phone Validation
